@@ -1,17 +1,17 @@
 {
-    "name": "pandam-blog",
-    "dockerComposeFile": "docker-compose.yml",
-    "service": "app",
-    "workspaceFolder": "/workspace",
-    "forwardPorts": [
-        5173
-    ],
-    "postCreateCommand": "pnpm install --no-verify-store-integrity",
-    "customizations": {
-        "vscode": {
-            "settings": {
-                "terminal.integrated.defaultProfile.linux": "bash"
-            }
-        }
+  "name": "pandam-blog",
+  "dockerComposeFile": "../compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
     }
+  },
+  "forwardPorts": [
+    5173
+  ],
+  "postCreateCommand": "pnpm install"
 }

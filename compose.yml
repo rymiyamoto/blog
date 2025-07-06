@@ -1,10 +1,11 @@
 services:
   app:
     build:
-      context: ..
+      context: .
       dockerfile: Dockerfile
+      target: dev
     volumes:
-      - ..:/workspace:cached
+      - .:/workspace
     ports:
       - "5173:5173"
     command: pnpm dev

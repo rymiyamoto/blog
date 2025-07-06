@@ -6,7 +6,7 @@
     "forwardPorts": [
         5173
     ],
-    "postCreateCommand": "pnpm install",
+    "postCreateCommand": "pnpm install --no-verify-store-integrity",
     "customizations": {
         "vscode": {
             "settings": {

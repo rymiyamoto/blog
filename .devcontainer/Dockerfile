@@ -1,6 +1,6 @@
 FROM node:24.3.0-bookworm AS dev
 RUN apt-get update && \
-    apt-get install -y git curl bash && \
+    apt-get install -y git curl bash tree && \
     corepack enable && \
     corepack prepare pnpm@latest --activate
 WORKDIR /workspace

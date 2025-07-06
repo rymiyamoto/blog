@@ -1,5 +1,3 @@
-name: Deploy to Cloudflare Pages
-
 on:
   push:
     branches:
@@ -16,10 +14,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 24
-          cache: 'pnpm'
+          cache: 'npm'
 
-      - name: 🔧 Enable pnpm via Corepack
-        run: corepack enable
+      - name: 🔧 Install pnpm
+        run: npm install -g pnpm
 
       - name: 📦 Install dependencies
         run: pnpm install

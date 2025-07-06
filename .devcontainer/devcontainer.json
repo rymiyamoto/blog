@@ -6,8 +6,11 @@
   "customizations": {
     "vscode": {
       "settings": {
-        "terminal.integrated.defaultProfile.linux": "bash"
-      }
+        "terminal.integrated.defaultProfile.linux": "zsh",
+      },
+      "extensions": [
+        "ms-vscode-remote.remote-containers"
+      ]
     }
   },
   "forwardPorts": [

@@ -1,8 +1,9 @@
 FROM node:24.3.0-bookworm AS base
-RUN apt-get update && apt-get install -y git curl bash tree bash-completion \
+RUN apt-get update && apt-get install -y git curl zsh tree bash-completion \
     && corepack enable \
     && corepack prepare pnpm@latest --activate \
-    && echo 'if [ -f /usr/share/bash-completion/bash_completion ]; then . /usr/share/bash-completion/bash_completion; fi' >> ~/.bashrc
+    && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended \
+    && chsh -s $(which zsh)
 
 WORKDIR /workspace
 

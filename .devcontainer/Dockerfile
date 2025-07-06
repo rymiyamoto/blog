@@ -1,16 +1,19 @@
-FROM node:24.3.0-alpine3.21
-
-RUN apk update && \
-    apk add --no-cache git curl
-
+FROM node:24.3.0-bookworm AS dev
+RUN apt-get update && \
+    apt-get install -y git curl bash && \
+    corepack enable && \
+    corepack prepare pnpm@latest --activate
 WORKDIR /workspace
-
-RUN npm install -g pnpm
-
-COPY pnpm-lock.yaml* package.json ./
-
+COPY package.json pnpm-lock.yaml ./
 RUN pnpm install
-
 COPY . .
+CMD ["pnpm", "dev"]
 
-CMD ["sleep", "infinity"]
+FROM dev AS builder
+WORKDIR /workspace
+RUN pnpm run build
+
+FROM nginx:alpine AS prod
+COPY --from=builder /workspace/dist /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

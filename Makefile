@@ -8,6 +8,10 @@ up:
 down:
 	docker compose down
 
+.PHONY: exec
+exec:
+	docker compose exec app ${cmd}
+
 .PHONY: dev
 dev:
 	docker compose exec app pnpm dev

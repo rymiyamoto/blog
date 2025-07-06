@@ -1,14 +1,13 @@
+---
+title: "web開発 の記事一覧"
+---
 
-# ようこそ
-
-エンジニアチックなことや、ただ趣味やオタクなことを何でも雑につぶやきます
-
-## 最新記事
+# web開発 の記事一覧
 
 <ul class="tag-post-cards">
   <li class="tag-post-card">
     <a href="/posts/20250707" class="tag-post-link">
-    <div class="tag-post-thumbnail-wrapper">
+      <div class="tag-post-thumbnail-wrapper">
         <img src="/images/common/icon.jpeg" alt="ブログ爆誕 サムネイル" class="tag-post-thumbnail" />
       </div>
       <div class="tag-post-content">
@@ -19,4 +18,3 @@
     </a>
   </li>
 </ul>
-  

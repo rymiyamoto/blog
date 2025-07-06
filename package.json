@@ -3,11 +3,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vitepress dev docs --host",
-    "build": "vitepress build docs",
-    "serve": "vitepress serve docs"
+    "generate": "tsx scripts/generatePages.ts",
+    "dev": "pnpm generate && vitepress dev docs --host",
+    "build": "pnpm generate && vitepress build docs"
   },
   "devDependencies": {
+    "@types/node": "24.0.10",
+    "tsx": "4.20.3",
     "vitepress": "1.6.3",
     "vue": "3.5.17"
   },

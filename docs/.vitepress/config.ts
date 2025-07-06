@@ -1,4 +1,7 @@
 import { defineConfig } from 'vitepress'
 
-// https://vitepress.vuejs.org/config/app-configs
-export default defineConfig({})
+export default defineConfig({
+  lang: 'ja',
+  title: 'パンダムの徒然なる日記',
+  description: 'ワイことパンダムがエンジニアチックなこと書くし、ただ趣味やオタクなことを何でも雑に書くブログです。',
+})

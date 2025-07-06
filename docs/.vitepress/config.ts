@@ -45,7 +45,7 @@ export default defineConfig({
         ],
       },
       {
-        text: 'Copyright © 2025 パンダム / rymiyamoto'
+        text: 'Copyright © 2025 パンダム/rymiyamoto'
       },
     ],
     socialLinks: [

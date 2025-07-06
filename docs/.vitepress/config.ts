@@ -49,8 +49,8 @@ export default defineConfig({
       },
     ],
     socialLinks: [
+      { icon: 'twitter', link: 'https://twitter.com/rymiyamoto129' },
       { icon: 'github', link: 'https://github.com/rymiyamoto' },
-      { icon: 'twitter', link: 'https://x.com/rymiyamoto129' },
     ],
     search: {
       provider: 'local'

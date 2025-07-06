@@ -14,7 +14,12 @@ SR400というバイクでぶらっと何処かに放浪する癖がある<br>
 延長線上でキャンプやら弾丸旅行など意味のわからないことをしている事がしばしば
 
 ## 連絡先
-<img src="./images/icons/x.svg" alt="x" width="20px"/>
 
-- [Twitter(現X)](https://x.com/rymiyamoto129)
-- [GitHub](https://github.com/rymiyamoto)
+<div class="sns_icons">
+  <a href="https://twitter.com/rymiyamoto129" target="_blank" rel="noopener">
+    <span class="sns_icon sns_icon_twitter"></span>
+  </a>
+  <a href="https://github.com/rymiyamoto" target="_blank" rel="noopener">
+    <span class="sns_icon sns_icon_github"></span>
+  </a>
+</div>

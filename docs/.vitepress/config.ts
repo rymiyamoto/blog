@@ -1,4 +1,10 @@
 import { defineConfig } from 'vitepress'
+import { getAllTags } from './utils/tags'
+
+const tagItems = getAllTags().map(tag => ({
+  text: tag,
+  link: `/tags/${tag}`
+}))
 
 export default defineConfig({
   lang: 'ja',
@@ -37,12 +43,8 @@ export default defineConfig({
         text: 'エンジニアチックなことや、ただ趣味やオタクなことを何でも雑に書くブログです'
       },
       {
-        text: 'Category',
-        items: [
-          { text: 'WEB開発', link: '/introduction' },
-          { text: 'オタ活', link: '/getting-started' },
-          { text: 'バイク', link: '/getting-started' },
-        ],
+        text: 'タグ',
+        items: tagItems
       },
       {
         text: 'Copyright © 2025 パンダム/rymiyamoto'

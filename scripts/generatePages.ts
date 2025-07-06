@@ -4,6 +4,7 @@ import matter from 'gray-matter'
 
 const postsDir = path.resolve(process.cwd(), 'docs/posts')
 const tagsDir = path.resolve(process.cwd(), 'docs/tags')
+const indexFile = path.resolve(process.cwd(), 'docs/index.md')
 const dummyThumbnail = '/images/common/icon.jpeg'
 
 function formatDate(dateStr: string): string {
@@ -108,4 +109,36 @@ ${cardsHtml}
   })
 }
 
+function generateLatestSection() {
+  const latestPosts = getPosts().slice(0, 5)
+
+  const cardsHtml = latestPosts.map(post => `  <li class="tag-post-card">
+    <a href="${post.path}" class="tag-post-link">
+    <div class="tag-post-thumbnail-wrapper">
+        <img src="${post.thumbnail}" alt="${post.title} サムネイル" class="tag-post-thumbnail" />
+      </div>
+      <div class="tag-post-content">
+        <h3 class="tag-post-title">${post.title}</h3>
+        <time class="tag-post-date">${post.date}</time>
+        <p class="tag-post-excerpt">${post.excerpt}</p>
+      </div>
+    </a>
+  </li>`).join('\n')
+
+  const html = `
+# ようこそ
+
+エンジニアチックなことや、ただ趣味やオタクなことを何でも雑につぶやきます
+
+## 最新記事
+
+<ul class="tag-post-cards">
+${cardsHtml}
+</ul>
+  `
+
+  fs.writeFileSync(indexFile, html)
+}
+
+generateLatestSection()
 generateTagPages()

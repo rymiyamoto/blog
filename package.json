@@ -3,9 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "prepare:tags": "tsx scripts/generate-tags.ts",
-    "dev": "pnpm prepare:tags && vitepress dev docs --host",
-    "build": "pnpm prepare:tags && vitepress build docs"
+    "generate": "tsx scripts/generatePages.ts",
+    "dev": "pnpm generate && vitepress dev docs --host",
+    "build": "pnpm generate && vitepress build docs"
   },
   "devDependencies": {
     "@types/node": "24.0.10",

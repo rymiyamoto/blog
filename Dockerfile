@@ -1,7 +1,7 @@
 FROM node:24.3.0-bookworm AS base
 RUN apt-get update && apt-get install -y git curl zsh tree bash-completion vim \
     && corepack enable \
-    && corepack prepare pnpm@latest --activate \
+    && corepack prepare pnpm@10.12.4 --activate \
     && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended \
     && echo 'export SHELL=/usr/bin/zsh' >> /etc/profile \
     && echo 'export DEFAULT_USER=root' >> /etc/zsh/zshrc \

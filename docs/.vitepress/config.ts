@@ -4,7 +4,7 @@ export default defineConfig({
   lang: 'ja',
   title: 'パンダムの徒然なる日記',
   titleTemplate: ':title - パンダムの徒然なる日記 Suffix',
-  description: 'ワイことパンダムがエンジニアチックなこと書くし、ただ趣味やオタクなことを何でも雑に書くブログです。',
+  description: 'エンジニアチックなことや、ただ趣味やオタクなことを何でも雑に書くブログです',
   head: [
     [
       'link',
@@ -26,7 +26,35 @@ export default defineConfig({
   ignoreDeadLinks: true,
   themeConfig: {
     nav: [
-      { text: 'About', link: '/about' },
-    ]
+      {
+        text: 'About',
+        link: '/about',
+        target: '_self',
+      },
+    ],
+    sidebar: [
+      {
+        text: 'エンジニアチックなことや、ただ趣味やオタクなことを何でも雑に書くブログです'
+      },
+      {
+        text: 'Category',
+        items: [
+          { text: 'WEB開発', link: '/introduction' },
+          { text: 'オタ活', link: '/getting-started' },
+          { text: 'バイク', link: '/getting-started' },
+        ],
+      },
+      {
+        text: 'Copyright © 2025 パンダム / rymiyamoto'
+      },
+    ],
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/rymiyamoto' },
+      { icon: 'twitter', link: 'https://x.com/rymiyamoto129' },
+    ],
+    search: {
+      provider: 'local'
+    },
   },
+  lastUpdated: true,
 })

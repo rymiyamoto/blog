@@ -1,6 +1,5 @@
 # パンダム / rymiyamoto
-<br>
-<img src="./images/common/icon.jpeg" alt="パンダム / rymiyamoto" width="100px"/>
+<br><img src="./images/common/icon.jpeg" alt="パンダム / rymiyamoto" width="100px"/>
 
 [鉄火](https://tabelog.com/tokyo/A1314/A131402/13123414/)を実家と主張する人🍶
 

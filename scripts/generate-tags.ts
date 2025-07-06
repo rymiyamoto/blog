@@ -43,7 +43,7 @@ function getPosts() {
 
     const excerptRaw = content.split('\n').slice(0, 5).join(' ')
     const cleaned = stripMarkdown(excerptRaw)
-    const excerpt = escapeHtml(cleaned.slice(0, 100)) + '...'
+    const excerpt = escapeHtml(cleaned.slice(0, 200))
 
     return {
       title: data.title || 'タイトルなし',
@@ -79,17 +79,18 @@ function generateTagPages() {
         ? `<time class="tag-post-date">${post.date}</time>`
         : ''
 
-      return `
-<li class="tag-post-card">
-  <a href="${post.path}" class="tag-post-link">
-    <img src="${post.thumbnail}" alt="${post.title} サムネイル" class="tag-post-thumbnail" />
-    <div class="tag-post-content">
-      <h3 class="tag-post-title">${post.title}</h3>
-      ${timeTag}
-      <p class="tag-post-excerpt">${post.excerpt}</p>
-    </div>
-  </a>
-</li>`
+      return `  <li class="tag-post-card">
+    <a href="${post.path}" class="tag-post-link">
+      <div class="tag-post-thumbnail-wrapper">
+        <img src="${post.thumbnail}" alt="${post.title} サムネイル" class="tag-post-thumbnail" />
+      </div>
+      <div class="tag-post-content">
+        <h3 class="tag-post-title">${post.title}</h3>
+        ${timeTag}
+        <p class="tag-post-excerpt">${post.excerpt}</p>
+      </div>
+    </a>
+  </li>`
     }).join('\n')
 
     const md = `---

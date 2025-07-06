@@ -1,3 +1,25 @@
+.profile {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: 8px;
+  gap: 16px;
+}
+
+.profile_icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile_text {
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--vp-c-text);
+}
+
 .sns_icons {
   display: flex;
   gap: 8px;

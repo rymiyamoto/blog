@@ -1,8 +1,11 @@
 # パンダム/rymiyamoto
-<br><img src="./images/common/icon.jpeg" alt="パンダム/rymiyamoto" width="100px"/>
-
-[鉄火](https://tabelog.com/tokyo/A1314/A131402/13123414/)を実家と主張する人🍶<br>
-Twitter(強い意志)が比較的浮上率が高いです
+<div class="profile">
+  <img src="/images/common/icon.jpeg" alt="パンダム/rymiyamoto" class="profile_icon"/>
+  <p class="profile_text">
+    <a href="https://tabelog.com/tokyo/A1314/A131402/13123414/">鉄火</a>を実家と主張する人🍶<br>
+    Twitter(強い意志)が主戦場
+  </p>
+</div>
 
 ## パブリックな姿
 BE/FE限らずweb系触ってる<br>

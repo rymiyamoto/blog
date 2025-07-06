@@ -1,11 +1,10 @@
 services:
   app:
     build:
-      context: .
-      dockerfile: .devcontainer/Dockerfile
+      context: ..
+      dockerfile: Dockerfile
     volumes:
-      - .:/workspace:cached
-    working_dir: /workspace
+      - ..:/workspace:cached
     ports:
       - "5173:5173"
-    command: sleep infinity
+    command: pnpm dev

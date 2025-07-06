@@ -4,9 +4,6 @@ RUN apt-get update && \
     corepack enable && \
     corepack prepare pnpm@latest --activate
 WORKDIR /workspace
-COPY package.json pnpm-lock.yaml ./
-RUN pnpm install
-COPY . .
 CMD ["pnpm", "dev"]
 
 FROM dev AS builder

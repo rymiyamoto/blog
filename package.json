@@ -3,11 +3,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vitepress dev docs --host",
-    "build": "vitepress build docs",
-    "serve": "vitepress serve docs"
+    "prepare:tags": "tsx scripts/generate-tags.ts",
+    "dev": "pnpm prepare:tags && vitepress dev docs --host",
+    "build": "pnpm prepare:tags && vitepress build docs"
   },
   "devDependencies": {
+    "@types/node": "24.0.10",
+    "tsx": "4.20.3",
     "vitepress": "1.6.3",
     "vue": "3.5.17"
   },

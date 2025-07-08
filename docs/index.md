@@ -7,6 +7,18 @@
 
 <ul class="tag-post-cards">
   <li class="tag-post-card">
+    <a href="/posts/20250708" class="tag-post-link">
+    <div class="tag-post-thumbnail-wrapper">
+        <img src="/images/common/icon.jpeg" alt="技術発信における個人と組織 サムネイル" class="tag-post-thumbnail" />
+      </div>
+      <div class="tag-post-content">
+        <h3 class="tag-post-title">技術発信における個人と組織</h3>
+        <time class="tag-post-date">2025-07-08</time>
+        <p class="tag-post-excerpt">技術発信における個人と組織  職場での技術の発信周りの話でちょっと気になる事があったのでその雑な話となります。</p>
+      </div>
+    </a>
+  </li>
+  <li class="tag-post-card">
     <a href="/posts/20250707" class="tag-post-link">
     <div class="tag-post-thumbnail-wrapper">
         <img src="/images/common/icon.jpeg" alt="ブログ爆誕 サムネイル" class="tag-post-thumbnail" />

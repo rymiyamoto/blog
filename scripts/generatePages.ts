@@ -54,7 +54,7 @@ function getPosts() {
       excerpt,
       path: `/posts/${file.replace(/\.md$/, '')}`
     }
-  })
+  }).reverse()
 }
 
 function groupPostsByTag(posts: any[]) {

@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "generate": "tsx scripts/generatePages.ts",
-    "dev": "pnpm generate && vitepress dev docs --host",
+    "dev": "pnpm install && pnpm generate && vitepress dev docs --host",
     "build": "pnpm generate && vitepress build docs"
   },
   "devDependencies": {
@@ -25,6 +25,8 @@
     ]
   },
   "dependencies": {
-    "gray-matter": "4.0.3"
+    "generate": "0.14.0",
+    "gray-matter": "4.0.3",
+    "pnpm": "10.12.4"
   }
 }

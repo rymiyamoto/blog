@@ -1,5 +1,7 @@
 services:
   app:
+    container_name: pandam-blog-app
+    image: pandam-blog-app
     build:
       context: .
       dockerfile: Dockerfile

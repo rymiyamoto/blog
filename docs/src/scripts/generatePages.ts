@@ -85,7 +85,9 @@ next: false
 <PostCardList :posts='${postsJson.replace(/'/g, "&#39;")}' />
 `
     fs.writeFileSync(tagFile, md)
+    console.log(`Generated tag page: ${tagFile}`)
   })
+  console.log(`Generated ${Object.keys(tags).length} tag pages.`)
 }
 
 function generateLatestSection() {
@@ -106,6 +108,8 @@ next: false
 <PostCardList :posts='${postsJson.replace(/'/g, "&#39;")}' />
 `
   fs.writeFileSync(indexFile, html)
+  console.log(`Generated latest section in: ${indexFile}`)
+  console.log(`Generated latest section with ${latestPosts.length} posts.`)
 }
 
 generateLatestSection()

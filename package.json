@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "generate": "tsx scripts/generatePages.ts",
+    "generate": "tsx docs/scripts/generatePages.ts",
     "dev": "pnpm generate && vitepress dev docs --host",
     "build": "pnpm generate && vitepress build docs"
   },

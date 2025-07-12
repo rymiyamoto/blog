@@ -19,7 +19,7 @@ next: false
     "path": "/posts/2025-07-13"
   },
   {
-    "title": "ブログ爆誕",
+    "title": "雑にブログ作りました",
     "date": "2025-07-07",
     "tags": [
       "web開発"

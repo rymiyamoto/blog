@@ -60,7 +60,7 @@ function updatePostFile(post: Post, fm: FrontMatter, dir: string) {
   console.log(`Updated: ${post.file}`);
 }
 
-function autoLinkPosts() {
+function autoLinkPages() {
   const postsDir = getDocsPath('posts');
   const files = getPostFiles(postsDir);
   const posts = sortPostsByDate(loadPosts(files, postsDir));
@@ -72,4 +72,4 @@ function autoLinkPosts() {
   });
 }
 
-autoLinkPosts();
+autoLinkPages();

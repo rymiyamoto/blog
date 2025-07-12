@@ -5,7 +5,7 @@
   "scripts": {
     "new": "./scripts/tsx-alias.sh docs/src/scripts/createPage.ts",
     "gen:page": "./scripts/tsx-alias.sh docs/src/scripts/generatePages.ts",
-    "gen:link": "./scripts/tsx-alias.sh docs/src/scripts/autoLinkPosts.ts",
+    "gen:link": "./scripts/tsx-alias.sh docs/src/scripts/autoLinkPages.ts",
     "gen": "pnpm gen:link && pnpm gen:page",
     "dev": "pnpm gen && vitepress dev docs --host",
     "build": "pnpm gen && vitepress build docs"

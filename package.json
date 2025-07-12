@@ -3,9 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "new": "./scripts/tsx-alias.sh docs/src/scripts/createPage.ts",
-    "gen:page": "./scripts/tsx-alias.sh docs/src/scripts/generatePages.ts",
-    "gen:link": "./scripts/tsx-alias.sh docs/src/scripts/autoLinkPages.ts",
+    "new": "tsx --tsconfig docs/tsconfig.json --require tsconfig-paths/register docs/src/scripts/createPage.ts",
+    "gen:page": "tsx --tsconfig docs/tsconfig.json --require tsconfig-paths/register docs/src/scripts/generatePages.ts",
+    "gen:link": "tsx --tsconfig docs/tsconfig.json --require tsconfig-paths/register docs/src/scripts/autoLinkPages.ts",
     "gen": "pnpm gen:link && pnpm gen:page",
     "dev": "pnpm gen && vitepress dev docs --host",
     "build": "pnpm gen && vitepress build docs"

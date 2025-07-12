@@ -1,11 +1,5 @@
 # パンダム/rymiyamoto
-<div class="profile">
-  <img src="/images/common/icon.jpeg" alt="パンダム/rymiyamoto" class="profile_icon"/>
-  <p class="profile_text">
-    <a href="https://tabelog.com/tokyo/A1314/A131402/13123414/">鉄火</a>を実家と主張する人🍶<br>
-    Twitter(強い意志)が主戦場
-  </p>
-</div>
+<Profile />
 
 ## パブリックな姿
 BE/FE限らずweb系触ってる<br>
@@ -19,11 +13,4 @@ SR400というバイクでぶらっと何処かに放浪する癖がある<br>
 
 ## 連絡先
 
-<div class="sns_icons">
-  <a href="https://twitter.com/rymiyamoto129" target="_blank" rel="noopener">
-    <span class="sns_icon sns_icon_twitter"></span>
-  </a>
-  <a href="https://github.com/rymiyamoto" target="_blank" rel="noopener">
-    <span class="sns_icon sns_icon_github"></span>
-  </a>
-</div>
+<SNSLinks />

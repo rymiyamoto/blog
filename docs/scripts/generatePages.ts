@@ -74,69 +74,30 @@ function generateTagPages() {
 
   Object.entries(tags).forEach(([tag, posts]) => {
     const tagFile = path.join(tagsDir, `${tag}.md`)
-
-    const cardsHtml = posts.map(post => {
-      const timeTag = post.date
-        ? `<time class="tag-post-date">${post.date}</time>`
-        : ''
-
-      return `  <li class="tag-post-card">
-    <a href="${post.path}" class="tag-post-link">
-      <div class="tag-post-thumbnail-wrapper">
-        <img src="${post.thumbnail}" alt="${post.title} サムネイル" class="tag-post-thumbnail" />
-      </div>
-      <div class="tag-post-content">
-        <h3 class="tag-post-title">${post.title}</h3>
-        ${timeTag}
-        <p class="tag-post-excerpt">${post.excerpt}</p>
-      </div>
-    </a>
-  </li>`
-    }).join('\n')
-
+    const postsJson = JSON.stringify(posts, null, 2)
     const md = `---
 title: "${tag} の記事一覧"
 ---
 
 # ${tag} の記事一覧
 
-<ul class="tag-post-cards">
-${cardsHtml}
-</ul>
+<PostCardList :posts='${postsJson.replace(/'/g, "&#39;")}' />
 `
-
     fs.writeFileSync(tagFile, md)
   })
 }
 
 function generateLatestSection() {
   const latestPosts = getPosts().slice(0, 5)
-
-  const cardsHtml = latestPosts.map(post => `  <li class="tag-post-card">
-    <a href="${post.path}" class="tag-post-link">
-    <div class="tag-post-thumbnail-wrapper">
-        <img src="${post.thumbnail}" alt="${post.title} サムネイル" class="tag-post-thumbnail" />
-      </div>
-      <div class="tag-post-content">
-        <h3 class="tag-post-title">${post.title}</h3>
-        <time class="tag-post-date">${post.date}</time>
-        <p class="tag-post-excerpt">${post.excerpt}</p>
-      </div>
-    </a>
-  </li>`).join('\n')
-
-  const html = `
-# ようこそ
+  const postsJson = JSON.stringify(latestPosts, null, 2)
+  const html = `# ようこそ
 
 エンジニアチックなことや、ただ趣味やオタクなことを何でも雑につぶやきます
 
 ## 最新記事
 
-<ul class="tag-post-cards">
-${cardsHtml}
-</ul>
-  `
-
+<PostCardList :posts='${postsJson.replace(/'/g, "&#39;")}' />
+`
   fs.writeFileSync(indexFile, html)
 }
 

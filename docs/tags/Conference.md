@@ -16,6 +16,6 @@ next: false
     ],
     "thumbnail": "/images/20250713/1000007961.jpg",
     "excerpt": "SRE NEXT 2025に行ってきた  SRE NEXT 2025に参加してきました、今回は一般参加なのでブース運営なしのシンプルなやつ",
-    "path": "/posts/20250713"
+    "path": "/posts/2025-07-13"
   }
 ]' />

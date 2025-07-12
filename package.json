@@ -3,7 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "gen": "tsx docs/src/scripts/generatePages.ts",
+    "gen:page": "tsx docs/src/scripts/generatePages.ts",
+    "gen:link": "tsx docs/src/scripts/autoLinkPosts.ts",
+    "gen": "pnpm gen:link && pnpm gen:page",
     "dev": "pnpm gen && vitepress dev docs --host",
     "build": "pnpm gen && vitepress build docs"
   },

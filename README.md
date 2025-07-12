@@ -48,10 +48,8 @@ title: ブログタイトル
 tags:
   - つけたいタグ
   - 複数おk
-date: 2025-07-07(YYYY-MM-DDで記事作成日を記載)
 thumbnail: /images/thumbnail.png
 ---
-
 ## 記事タイトル
 あとはお好きに書く
 ```

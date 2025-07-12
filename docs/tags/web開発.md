@@ -16,7 +16,7 @@ next: false
     ],
     "thumbnail": "/images/20250713/1000007961.jpg",
     "excerpt": "SRE NEXT 2025に行ってきた  SRE NEXT 2025に参加してきました、今回は一般参加なのでブース運営なしのシンプルなやつ",
-    "path": "/posts/20250713"
+    "path": "/posts/2025-07-13"
   },
   {
     "title": "ブログ爆誕",
@@ -26,6 +26,6 @@ next: false
     ],
     "thumbnail": "/images/common/icon.jpeg",
     "excerpt": "雑にブログ作りました  技術的な話だけではなく、オタクな話や趣味の話も書いていきたいと思い、ブログを作成しました。 VitePressを使って、Markdownで記事をかけるようにしているので、気軽に更新できると思います。(多分)",
-    "path": "/posts/20250707"
+    "path": "/posts/2025-07-07"
   }
 ]' />

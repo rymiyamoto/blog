@@ -3,9 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "generate": "tsx docs/scripts/generatePages.ts",
-    "dev": "pnpm generate && vitepress dev docs --host",
-    "build": "pnpm generate && vitepress build docs"
+    "gen": "tsx docs/src/scripts/generatePages.ts",
+    "dev": "pnpm gen && vitepress dev docs --host",
+    "build": "pnpm gen && vitepress build docs"
   },
   "devDependencies": {
     "@types/node": "24.0.10",

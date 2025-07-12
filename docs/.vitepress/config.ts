@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import { getAllTags } from './utils/tags'
+import { getAllTags } from '../src/utils/tags'
 
 const tagItems = getAllTags().map(tag => ({
   text: tag,

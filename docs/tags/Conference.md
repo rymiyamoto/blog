@@ -1,5 +1,7 @@
 ---
 title: "Conference の記事一覧"
+prev: false
+next: false
 ---
 
 # Conference の記事一覧

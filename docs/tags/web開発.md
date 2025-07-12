@@ -1,5 +1,7 @@
 ---
 title: "web開発 の記事一覧"
+prev: false
+next: false
 ---
 
 # web開発 の記事一覧

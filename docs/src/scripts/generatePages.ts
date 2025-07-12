@@ -77,6 +77,8 @@ function generateTagPages() {
     const postsJson = JSON.stringify(posts, null, 2)
     const md = `---
 title: "${tag} の記事一覧"
+prev: false
+next: false
 ---
 
 # ${tag} の記事一覧
@@ -90,7 +92,12 @@ title: "${tag} の記事一覧"
 function generateLatestSection() {
   const latestPosts = getPosts().slice(0, 5)
   const postsJson = JSON.stringify(latestPosts, null, 2)
-  const html = `# ようこそ
+  const html = `---
+prev: false
+next: false
+---
+
+# ようこそ
 
 エンジニアチックなことや、ただ趣味やオタクなことを何でも雑につぶやきます
 

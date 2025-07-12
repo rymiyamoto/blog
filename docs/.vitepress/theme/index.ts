@@ -1,6 +1,5 @@
 import DefaultTheme from 'vitepress/theme'
 import './about.css'
-import './post.css'
 import PostCardList from '../../../src/components/PostCardList.vue'
 import PostCard from '../../../src/components/PostCard.vue'
 

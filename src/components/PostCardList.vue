@@ -1,5 +1,5 @@
 <template>
-  <ul class="tag-post-cards">
+  <ul class="post-cards">
     <PostCard v-for="post in posts" :key="post.path" :post="post" />
   </ul>
 </template>
@@ -13,3 +13,14 @@ defineProps({
   }
 })
 </script>
+<style scoped>
+.post-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0;
+  list-style: none;
+  margin-top: 1.5rem;
+  padding: 0 !important;
+}
+</style>

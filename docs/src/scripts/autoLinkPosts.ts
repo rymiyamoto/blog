@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { getDocsPath } from '@/utils/paths';
 
 type FrontMatter = {
   title: string;
@@ -14,14 +15,11 @@ type Post = {
   content: string;
 };
 
-const postsDir = path.resolve(process.cwd(), 'docs/posts')
-
 function getPostFiles(dir: string): string[] {
   return fs.readdirSync(dir).filter(f => f.endsWith('.md'));
 }
 
 function extractDateFromFilename(filename: string): string {
-  // 例: 2025-07-13.md → 2025-07-13
   const match = filename.match(/^(\d{4}-\d{2}-\d{2})\.md$/);
   return match ? match[1] : '';
 }
@@ -31,7 +29,6 @@ function loadPosts(files: string[], dir: string): Post[] {
     const fullPath = path.join(dir, file);
     const raw = fs.readFileSync(fullPath, 'utf-8');
     const parsed = matter(raw);
-    // dateはファイル名から取得
     const date = extractDateFromFilename(file);
     return {
       file,
@@ -64,6 +61,7 @@ function updatePostFile(post: Post, fm: FrontMatter, dir: string) {
 }
 
 function autoLinkPosts() {
+  const postsDir = getDocsPath('posts');
   const files = getPostFiles(postsDir);
   const posts = sortPostsByDate(loadPosts(files, postsDir));
   posts.forEach((post, i) => {

@@ -1,11 +1,8 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-
-const postsDir = path.resolve(process.cwd(), 'docs/posts')
-const tagsDir = path.resolve(process.cwd(), 'docs/tags')
-const indexFile = path.resolve(process.cwd(), 'docs/index.md')
-const dummyThumbnail = '/images/common/icon.jpeg'
+import { getDocsPath } from '@/utils/paths';
+import { DUMMY_THUMBNAIL, MAX_DESCRIPTION_LENGTH, MAX_LATEST_POSTS } from '@/constants/post'
 
 function formatDate(dateStr: string): string {
   const date = new Date(dateStr)
@@ -36,21 +33,22 @@ function escapeHtml(str: string): string {
 }
 
 function getPosts() {
+  const postsDir = getDocsPath('posts')
   const files = fs.readdirSync(postsDir)
   return files.map(file => {
     const fullPath = path.join(postsDir, file)
     const raw = fs.readFileSync(fullPath, 'utf-8')
     const { data, content } = matter(raw)
 
-    const excerptRaw = content.split('\n').slice(0, 5).join(' ')
+    const excerptRaw = content.split('\n').join(' ')
     const cleaned = stripMarkdown(excerptRaw)
-    const excerpt = escapeHtml(cleaned.slice(0, 200))
+    const excerpt = escapeHtml(cleaned.slice(0, MAX_DESCRIPTION_LENGTH))
 
     return {
       title: data.title || 'タイトルなし',
       date: formatDate(data.date || ''),
       tags: data.tags || [],
-      thumbnail: data.thumbnail || dummyThumbnail,
+      thumbnail: data.thumbnail || DUMMY_THUMBNAIL,
       excerpt,
       path: `/posts/${file.replace(/\.md$/, '')}`
     }
@@ -69,6 +67,7 @@ function groupPostsByTag(posts: any[]) {
 }
 
 function generateTagPages() {
+  const tagsDir = getDocsPath('tags')
   const posts = getPosts()
   const tags = groupPostsByTag(posts)
 
@@ -90,7 +89,8 @@ next: false
 }
 
 function generateLatestSection() {
-  const latestPosts = getPosts().slice(0, 5)
+  const indexFile = getDocsPath('index.md')
+  const latestPosts = getPosts().slice(0, MAX_LATEST_POSTS)
   const postsJson = JSON.stringify(latestPosts, null, 2)
   const html = `---
 prev: false

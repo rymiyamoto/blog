@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { getDocsPath } from '@/utils/paths';
 
 function createPage(fileName: string): void {
   if (!fileName) {
@@ -7,7 +8,7 @@ function createPage(fileName: string): void {
     process.exit(1);
   }
 
-  const postsDir = path.resolve(process.cwd(), 'docs/posts');
+  const postsDir = getDocsPath('posts');
   if (!fs.existsSync(postsDir)) {
     fs.mkdirSync(postsDir, { recursive: true });
   }

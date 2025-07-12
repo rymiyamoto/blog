@@ -6,5 +6,10 @@
                 "src/*"
             ]
         }
-    }
+    },
+    "include": [
+        "src",
+        ".vitepress",
+        ".vitepress/theme",
+    ]
 }

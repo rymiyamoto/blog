@@ -37,19 +37,10 @@ docs
 |---|---|---|
 |title|記事のタイトル|ブログ爆誕|
 |tags|記事に付けたいタグ、複数指定可能|web開発, 雑記|
-|date|記事の作成日、YYYY-MM-DD形式で記載|2025-03-07|
 |thumbnail|記事のサムネイル画像、`docs/public/images/` 配下に配置した画像を指定する|/images/thumbnail.png|
 
-イメージ
+コマンド
 
-```md
----
-title: ブログタイトル
-tags:
-  - つけたいタグ
-  - 複数おk
-thumbnail: /images/thumbnail.png
----
-## 記事タイトル
-あとはお好きに書く
+```sh
+$ pnpm new 2025-03-07
 ```

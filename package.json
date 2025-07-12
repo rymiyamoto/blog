@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "new": "tsx docs/src/scripts/createPage.ts",
     "gen:page": "tsx docs/src/scripts/generatePages.ts",
     "gen:link": "tsx docs/src/scripts/autoLinkPosts.ts",
     "gen": "pnpm gen:link && pnpm gen:page",

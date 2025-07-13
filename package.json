@@ -3,12 +3,16 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "generate": "tsx docs/scripts/generatePages.ts",
-    "dev": "pnpm generate && vitepress dev docs --host",
-    "build": "pnpm generate && vitepress build docs"
+    "new": "NODE_OPTIONS='-r tsconfig-paths/register' TS_NODE_PROJECT=docs/tsconfig.json tsx --tsconfig docs/tsconfig.json docs/src/scripts/createPage.ts",
+    "gen:page": "NODE_OPTIONS='-r tsconfig-paths/register' TS_NODE_PROJECT=docs/tsconfig.json tsx --tsconfig docs/tsconfig.json docs/src/scripts/generatePages.ts",
+    "gen:link": "NODE_OPTIONS='-r tsconfig-paths/register' TS_NODE_PROJECT=docs/tsconfig.json tsx --tsconfig docs/tsconfig.json docs/src/scripts/autoLinkPages.ts",
+    "gen": "pnpm gen:link && pnpm gen:page",
+    "dev": "pnpm gen && vitepress dev docs --host",
+    "build": "pnpm gen && vitepress build docs"
   },
   "devDependencies": {
     "@types/node": "24.0.10",
+    "tsconfig-paths": "4.2.0",
     "tsx": "4.20.3",
     "vitepress": "1.6.3",
     "vue": "3.5.17"

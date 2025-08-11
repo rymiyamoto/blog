@@ -30,7 +30,7 @@ docs
 
 ## 記事の書き方
 
-`docs/posts/` 配下に `YYYYMMDD.md` の形式でファイルを作成する。<br>
+`docs/posts/` 配下に `YYYY-MM-DD.md` の形式でファイルを作成する。<br>
 このとき記事本編以外の情報も記載する
 
 |項目|説明|例|

@@ -54,8 +54,25 @@ function buildFrontMatter(post: Post, prev: Post | undefined, next: Post | undef
   return fm;
 }
 
+function buildTagLinks(tags: string[]): string {
+  if (!tags || !Array.isArray(tags)) return '';
+  return tags
+    .map(tag => `[${tag}](/tags/${encodeURIComponent(tag)})`)
+    .join('&ensp;');
+}
+
 function updatePostFile(post: Post, fm: FrontMatter, dir: string) {
-  const newContent = matter.stringify(post.content.trim() + '\n', fm);
+  let content = post.content.replace(
+    /\n?\[(?:[^\]]+\]\(\/tags\/[^\)]+\)&ensp;)*[^\]]+\]\(\/tags\/[^\)]+\)\n?$/g,
+    ''
+  ).trim();
+
+  const tagLinks = buildTagLinks(fm.tags);
+  if (tagLinks) {
+    content += `\n\n${tagLinks}\n`;
+  }
+
+  const newContent = matter.stringify(content, fm);
   fs.writeFileSync(path.join(dir, post.file), newContent, 'utf-8');
   console.log(`Updated: ${post.file}`);
 }

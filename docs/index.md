@@ -1,3 +1,7 @@
+---
+prev: false
+next: false
+---
 
 # ようこそ
 
@@ -5,30 +9,56 @@
 
 ## 最新記事
 
-<ul class="tag-post-cards">
-  <li class="tag-post-card">
-    <a href="/posts/20250708" class="tag-post-link">
-    <div class="tag-post-thumbnail-wrapper">
-        <img src="/images/common/icon.jpeg" alt="技術発信における個人と組織 サムネイル" class="tag-post-thumbnail" />
-      </div>
-      <div class="tag-post-content">
-        <h3 class="tag-post-title">技術発信における個人と組織</h3>
-        <time class="tag-post-date">2025-07-08</time>
-        <p class="tag-post-excerpt">技術発信における個人と組織  職場での技術の発信周りの話でちょっと気になる事があったのでその雑な話となります。</p>
-      </div>
-    </a>
-  </li>
-  <li class="tag-post-card">
-    <a href="/posts/20250707" class="tag-post-link">
-    <div class="tag-post-thumbnail-wrapper">
-        <img src="/images/common/icon.jpeg" alt="ブログ爆誕 サムネイル" class="tag-post-thumbnail" />
-      </div>
-      <div class="tag-post-content">
-        <h3 class="tag-post-title">ブログ爆誕</h3>
-        <time class="tag-post-date">2025-07-07</time>
-        <p class="tag-post-excerpt">雑にブログ作りました  技術的な話だけではなく、オタクな話や趣味の話も書いていきたいと思い、ブログを作成しました。 VitePressを使って、Markdownで記事をかけるようにしているので、気軽に更新できると思います。(多分)</p>
-      </div>
-    </a>
-  </li>
-</ul>
-  
+<PostCardList :posts='[
+  {
+    "title": "帰省から帰ってきた",
+    "date": "2025-08-23",
+    "tags": [
+      "雑記"
+    ],
+    "thumbnail": "/images/20250823/01.jpg",
+    "excerpt": "帰省から帰ってきた  帰ってきてから書いてなかったので更新です。  今回は基本掃除して甥の面倒見て大体が終わった夏休みである、休むことが目的であるはずなのに体調崩したぴえん。      結局休めてないじゃんという。  ただし地元で見る花火は見れたのと、松山の友達と飲みに行けたのはラッキー。    帰りは18切符でちまちま帰って、途中で燻製スタンドあったので寄ったぐらい。      若い時の体力って",
+    "path": "/posts/2025-08-23"
+  },
+  {
+    "title": "盆休みはじまた",
+    "date": "2025-08-13",
+    "tags": [
+      "雑記"
+    ],
+    "thumbnail": "/images/20250813/01.jpeg",
+    "excerpt": "盆休みはじまた  今日から20まで長めに休みとって生まれ故郷の愛媛に帰ってる。  飛行機で比較的早く予約抑えて2.2万だから相変わらずアホみたいに遠い、陸路で行くよりはもちろん断然早いんだけど。  往路に金使ったので帰りは18切符(3daysの1万)で気合で帰る予定。18から19でのんびり各駅停車に揺られるのでどこかで観光でもしようかなと。  ちなみにツイッター(強い意志)実況はするつもり。   ",
+    "path": "/posts/2025-08-13"
+  },
+  {
+    "title": "AI使うことを何でも正義にする風潮について",
+    "date": "2025-08-11",
+    "tags": [
+      "ポエム"
+    ],
+    "thumbnail": "/images/common/icon.jpeg",
+    "excerpt": "AI使うことを何でも正義にする風潮について   注意  結構自分でも正解ではないポエムだと思ってるので垂れ流してください。   現状  生成AIの進歩が著しく、エンジニアとしても利用するシーンが圧倒的に増えてきた。 界隈によっては全部AIにやらせて人間はプロンプトに集中するようになってきている。  投資家の興味が生成AIの技術利用に置かれ、株式会社では生成AI使ってゴリゴリ動かしているのが評価され",
+    "path": "/posts/2025-08-11"
+  },
+  {
+    "title": "SRE NEXT 2025に行ってきた",
+    "date": "2025-07-13",
+    "tags": [
+      "web開発",
+      "Conference"
+    ],
+    "thumbnail": "/images/20250713/1000007961.jpg",
+    "excerpt": "SRE NEXT 2025に行ってきた  SRE NEXT 2025に参加してきました、今回は一般参加なのでブース運営なしのシンプルなやつ    セッションは色々聞いてきた  資料は有志が公開されているものがあるのでそっち見てね   Fast by Friday: Making performance analysis fast and easy  SRE不在の開発チームが障害対応と向き合った10",
+    "path": "/posts/2025-07-13"
+  },
+  {
+    "title": "技術発信における個人と組織",
+    "date": "2025-07-08",
+    "tags": [
+      "ポエム"
+    ],
+    "thumbnail": "/images/common/icon.jpeg",
+    "excerpt": "技術発信における個人と組織  職場での技術の発信周りの話でちょっと気になる事があったのでその雑な話となります。  テックブログとか何かしらの技術まとめサイトとかでみんな好きな技術をポツポツ書いているのは個人だから好きに書けたりする。 しかし、組織での技術発信でみんなが好き勝手に書いていると、組織としての一貫性がなくなってしまう。 組織として特定の技術領域を強制に近い形にすることで組織としても欲しい",
+    "path": "/posts/2025-07-08"
+  }
+]' />

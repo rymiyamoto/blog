@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
-import { getAllTags } from './utils/tags'
+import path from 'path'
+import { getAllTags } from '../src/utils/tags'
 
 const tagItems = getAllTags().map(tag => ({
   text: tag,
@@ -60,4 +61,11 @@ export default defineConfig({
   },
   lastUpdated: true,
   cleanUrls: true,
+  vite: {
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, '../src'),
+      },
+    },
+  },
 })

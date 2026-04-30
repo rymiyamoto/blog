@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "src/*"
+            ]
+        },
+        "esModuleInterop": true,
+    },
+    "include": [
+        "src",
+        ".vitepress",
+        ".vitepress/theme",
+    ]
+}

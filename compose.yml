@@ -6,6 +6,10 @@ services:
       target: dev
     volumes:
       - .:/workspace
+      - node_modules:/workspace/node_modules
     ports:
       - "5173:5173"
-    command: pnpm dev
+    command: sleep infinity
+
+volumes:
+  node_modules:

@@ -24,3 +24,6 @@ docs/.vitepress/cache/
 *.njsproj
 *.sln
 *.sw?
+
+# private settings
+.claude/settings.local.json

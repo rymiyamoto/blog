@@ -1,6 +1,6 @@
 FROM node:26.4.0-bookworm AS base
 RUN apt-get update && apt-get install -y git curl zsh tree bash-completion vim \
-    && npm install -g pnpm@10 \
+    && npm install -g pnpm@11 \
     && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended \
     && echo 'export SHELL=/usr/bin/zsh' >> /etc/profile \
     && echo 'export DEFAULT_USER=root' >> /etc/zsh/zshrc \

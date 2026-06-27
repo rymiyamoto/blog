@@ -17,7 +17,7 @@ next: false
       "雑記"
     ],
     "thumbnail": "/images/20260627/thumbnail.jpeg",
-    "excerpt": "2026/06時点の近況やら   はじめに  マジで久しぶりにの更新、忘れすぎててまずこのブログの開発環境なそうところから始まった...  まあそんなのはどうでも良くて最近の話でもと   TSKaigi 2026に参加してきた  会社のブース担当だったのもありあまりセッションは見れず  https://x.com/search?q=from%3Arymiyamoto129%20%23TSKaigi",
+    "excerpt": "2026/06時点の近況やら   はじめに  マジで久しぶりにの更新、忘れすぎててまずこのブログの開発環境直すところから始まった...  まあそんなのはどうでも良くて最近の話でもと   TSKaigi 2026に参加してきた  会社のブース担当だったのもありあまりセッションは見れず  https://x.com/search?q=from%3Arymiyamoto129%20%23TSKaigi&amp;",
     "path": "/posts/2026-06-27"
   },
   {

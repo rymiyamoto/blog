@@ -1,4 +1,4 @@
-FROM node:24.15.0-bookworm AS base
+FROM node:26.4.0-bookworm AS base
 RUN apt-get update && apt-get install -y git curl zsh tree bash-completion vim \
     && npm install -g pnpm@10 \
     && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended \

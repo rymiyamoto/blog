@@ -48,7 +48,12 @@ async function fetchOgp(url: string): Promise<OgpData | null> {
 }
 
 function escapeAttr(s: string) {
-  return s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+  return s
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/\r?\n/g, '&#10;')
 }
 
 // Split markdown into processable / skip (code blocks) segments

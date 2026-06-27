@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import path from 'path'
 import { getAllTags } from '../src/utils/tags'
+import { ogpEmbedPlugin } from './plugins/ogpEmbed'
 
 const tagItems = getAllTags().map(tag => ({
   text: tag,
@@ -67,5 +68,6 @@ export default defineConfig({
         '@': path.resolve(__dirname, '../src'),
       },
     },
+    plugins: [ogpEmbedPlugin()],
   },
 })

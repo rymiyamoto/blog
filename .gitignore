@@ -13,6 +13,7 @@ dist
 dist-ssr
 *.local
 docs/.vitepress/cache/
+docs/.vitepress/ogp-cache.json
 
 # Editor directories and files
 .vscode/*

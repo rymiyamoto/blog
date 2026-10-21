@@ -1,7 +1,0 @@
-{
-  "peerDependencyRules": {
-    "ignoreMissing": [
-      "@algolia/client-search"
-    ]
-  }
-}
